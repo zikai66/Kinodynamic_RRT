@@ -7,6 +7,7 @@ toward the goal, and then plays the planned trajectory on a simple robot model.
 Grading runners will execute:
 ```bash
 ./install.sh
+source .venv/bin/activate
 python3 demo.py
 ```
 
