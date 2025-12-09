@@ -8,3 +8,6 @@ Grading runners will execute:
 ```bash
 ./install.sh
 python3 demo.py
+```
+
+The video demonstration can be found 

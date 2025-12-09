@@ -1,24 +1,16 @@
-set -euo pipefail
+set -e
 
-PYTHON_BIN="${PYTHON:-python3}"
+echo "Updating system packages..."
+sudo apt-get update -y
+sudo apt-get install -y python3 python3-pip python3-tk build-essential
 
-if ! command -v "$PYTHON_BIN" >/dev/null 2>&1; then
-  echo "[install] Error: python3 not found. Set \$PYTHON to your Python 3 path." >&2
-  exit 1
-fi
+echo "Upgrading pip..."
+python3 -m pip install --upgrade pip setuptools wheel
 
-if [ ! -d ".venv" ]; then
-  echo "[install] Creating virtual environment at .venv"
-  "$PYTHON_BIN" -m venv .venv
-fi
-source .venv/bin/activate
+echo "Installing Python dependencies..."
+pip install numpy scipy matplotlib pybullet
 
-python -m pip install --upgrade pip setuptools wheel
 
-python -m pip install \
-  numpy \
-  matplotlib \
-  pybullet \
-  pybullet-planning
-
-echo "[install] Done. To use: source .venv/bin/activate"
+echo "Installation complete!"
+echo "To run the demo, execute:"
+echo "  python3 demo.py"
