@@ -1,0 +1,37 @@
+\relax 
+\citation{webb2012kinodynamic}
+\citation{mit2009robotic_systems}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Implementation}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Dynamic Model\cite  {mit2009robotic_systems}}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Sampling and Expansion}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Collision Checking}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Greedy Goal Connection}{2}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Simulation Environment and Robot Setup}{2}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces PyBullet simulation environment and hovercraft robot.}}{3}{}\protected@file@percent }
+\newlabel{fig:env}{{1}{3}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Visualization and Execution}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.7}Algorithm and Code}{3}{}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Simplified KD-RRT Algorithm}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.8}Discussion}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}Results}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Experimental Setup}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Effect of Motion Primitive Count (k) on Planning}{5}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Aggregate performance vs.\ motion primitive count. Bars show execution time (s), waypoints, and total nodes explored for $k\in \{6,12,18\}$. Conditions: goal bias $0.12$, \texttt  {CONNECT\_HOPS}$=120$.}}{6}{}\protected@file@percent }
+\newlabel{fig:k_bar}{{2}{6}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Example solution with $k=6$ primitives. Fastest overall time in our tests. Path is smooth enough for the hovercraft but the tree explores fewer alternatives.}}{6}{}\protected@file@percent }
+\newlabel{fig:k6}{{3}{6}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Example solution with $k=12$ primitives. Richer steering than $k=6$; planning explores more nodes and takes longer but can yield slightly cleaner routes.}}{7}{}\protected@file@percent }
+\newlabel{fig:k12}{{4}{7}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Example solution with $k=18$ primitives. Most flexible local actions; highest node count and longest planning time due to larger branching and collision checking.}}{7}{}\protected@file@percent }
+\newlabel{fig:k18}{{5}{7}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Effect of Goal Bias on KD-RRT Performance}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Effect of Connect Hops}{8}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Performance comparison under different goal bias values. Bars show execution time, waypoints, and total nodes explored for biases of $0.05$, $0.12$, $0.20$, and $0.30$. Conditions: $k=12$ motion primitives, \texttt  {CONNECT\_HOPS}$=120$.}}{9}{}\protected@file@percent }
+\newlabel{fig:goal_bias}{{6}{9}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces KD-RRT performance vs.\ \texttt  {CONNECT\_HOPS}. Bars show runtime (s), waypoints, and total nodes explored. Conditions: $k=12$ motion primitives, goal bias $0.12$.}}{9}{}\protected@file@percent }
+\newlabel{fig:conn_hops}{{7}{9}{}{}{}}
+\bibcite{webb2012kinodynamic}{1}
+\bibcite{mit2009robotic_systems}{2}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusion}{10}{}\protected@file@percent }
+\gdef \@abspage@last{10}
