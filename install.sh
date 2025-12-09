@@ -1,16 +1,19 @@
 set -e
 
-echo "Updating system packages..."
+echo "🔧 Updating system packages..."
 sudo apt-get update -y
-sudo apt-get install -y python3 python3-pip python3-tk build-essential
+sudo apt-get install -y python3 python3-venv python3-tk build-essential
 
-echo "Upgrading pip..."
-python3 -m pip install --upgrade pip setuptools wheel
+if [ ! -d ".venv" ]; then
+  echo "Creating virtual environment..."
+  python3 -m venv .venv
+fi
 
-echo "Installing Python dependencies..."
-pip install numpy scipy matplotlib pybullet
+echo "Activating virtual environment..."
+source .venv/bin/activate
 
+echo "⬆Upgrading pip inside venv..."
+python -m pip install --upgrade pip setuptools wheel
 
-echo "Installation complete!"
-echo "To run the demo, execute:"
-echo "  python3 demo.py"
+echo "Installing dependencies..."
+pip install numpy scipy matplotlib pybullet pybullet-planning
