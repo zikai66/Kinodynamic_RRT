@@ -12,7 +12,7 @@ fi
 echo "Activating virtual environment..."
 source .venv/bin/activate
 
-echo "⬆Upgrading pip inside venv..."
+echo "Upgrading pip inside venv..."
 python -m pip install --upgrade pip setuptools wheel
 
 echo "Installing dependencies..."
