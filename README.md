@@ -10,4 +10,5 @@ Grading runners will execute:
 python3 demo.py
 ```
 
-The video demonstration can be found 
+## Demo Video
+Watch the project demo on YouTube: [Demo Video](https://www.youtube.com/watch?v=iivorhKRokE)
