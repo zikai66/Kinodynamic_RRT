@@ -10,8 +10,9 @@ toward the goal, and then plays the planned trajectory on a simple robot model.
 git clone https://github.com/zikai66/Kinodynamic_RRT.git
 ```
 
-2. Run the following command to build and activate the environment
+2. Run the following command to build and activate the environment 
 ```bash
+chmod +x install.sh
 ./install.sh
 source .venv/bin/activate
 ```
